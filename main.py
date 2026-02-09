@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import google.generativeai as genai
 import os
 
-genai.configure(api_key="AIzaSyCRklqwcLUoEQ4CqAlz3mCK_j8SJ-oqVWo")
+genai.configure(api_key=os.environ.get('GEMINI_KEY'))
 
 app = FastAPI()
 
